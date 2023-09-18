@@ -60,7 +60,8 @@ The demo of this project is live at [oi-demo](https://oi-demo.netlify.app/)
 
 ## Author(s)
 The people resonsible for bring this to live includes
-- [Onyedikachi Onu](https://st-pardon.netlify.app)
+- [Solomon Peter Ehigiamusoe]()
+
 
 ## Contributions
 There are two (2) ways you can contribute to this projects, contributing through the Codebase, or buy coffee for the maintainers of this project. If you wish to contribute to codebase of this project, read the following [rules and gudieline](./Contribution.md) to get started. Else you can [buy us a coffee](https://www.buymeacoffee.com/pardonne) <br /><img src='./client/src/assets/bmc_qr.png' width='150px' alt='buymeacoffee qrcode' />
