@@ -110,31 +110,36 @@ const LandingPage = () => {
           <HeadingH2 team>Meet the Team</HeadingH2>
           <Section team>
             <Figure team>
-              <img
-                src="https://res.cloudinary.com/dq4o7ygcd/image/upload/v1681909157/IMG_20230419_134610_hovwog.jpg"
-                style={{ width: '100%' }}
-                alt=""
-              />
+    
             </Figure>
             <HeroTextContatiner team>
-              <HeadingH3 team>Onyedikachi Onu</HeadingH3>
+              <HeadingH3 team>Solomon Peter Ehigiamusoe, Eden Ayodeji David, Eunice Adediran.</HeadingH3>
               <HeadingH3 team>Software Engineer @ AlxAfrica</HeadingH3>
               <Para team>
-                A software engineer with 2+ years of hands-on experience in
-                developing web applications using frontend technologies like
-                React, JavaScript, HTML5, CSS3 etc., and backend technologies
-                like Node.js/Express. When i don't code i have fun by watching
-                my favorite movies and TV shows, reading technical
-                blogs/articles and listening to music. I am a hard worker and
-                always deliver quality work within the specified timeframe.
+              Meet Our Team of Junior Software Engineers"
+
+Team Overview:
+We are a team of [3] enthusiastic and resourceful individuals, each bringing their unique talents and perspectives to the table. We hope to keep adding more to our skills to further our experience in the software engineering field.
+Collaborative Spirit: Collaboration is at the heart of their work. We were able to thrive in this project by sharing ideas, offering constructive feedback, and working together to overcome challenges.
+
+Eager Learners: We are natural learners, constantly seeking opportunities for growth and improvement. Whether it's through self-study, training, or mentorship, we are always looking to expand our horizons.
+
+Future Goals:
+Looking ahead, Our team is committed to:
+Continuously honing our skills and staying updated with the latest industry trends and technologies.
+Taking on more significant responsibilities and contributing to larger projects in future.
+Promoting a culture of innovation and excellence, inspiring our peers and fostering an environment conducive to growth.
+
+Conclusion:
+In conclusion, with the experience we gathered from THE ALX SOFTWARE ENGINNERING BOOT CAMP we hope to building more innovative projects thaty will impact positively to the growth of the economy.
               </Para>
               <Socials
-                twitter={'https://twitter.com/st_Pardon'}
-                github={'https://github.com/St-Pardon'}
+                twitter={'https://twitter.com/Dafluxtech'}
+                github={'https://github.com/Solomon454'}
                 linkedin={
-                  'https://www.linkedin.com/in/onyedikachi-onu-374a8512a/'
+                  'https://www.linkedin.com/in/ehigiamusoe-peter-aba228252/'
                 }
-                portfolio={'https://st-pardon.netlify.app'}
+                portfolio={'https://Dafluxtech.netlify.app'}
               />
             </HeroTextContatiner>
           </Section>
