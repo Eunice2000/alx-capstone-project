@@ -62,6 +62,7 @@ The demo of this project is live at [oi-demo](https://oi-demo.netlify.app/)
 The people resonsible for bring this to live includes
 - [Solomon Peter Ehigiamusoe]()
 - [Adediran eunice]
+- [Eden Ayodeji David]()
 
 
 ## Contributions
