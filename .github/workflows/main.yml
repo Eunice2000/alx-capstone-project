@@ -1,33 +1,33 @@
 name: S3 Upload
 
 on:
-  push
+  push:
+    branches:
+      - main
 
 jobs:
   upload:
-    name: Upload to S3
+    name: Use S3 Upload Action
     runs-on: ubuntu-latest
+
     steps:
-      - name: Use this action
-        uses: ./
-        id: upload
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-          aws-bucket: euniceportfolio
-          file-path: ./README.md
-          # destination-dir:
-          # bucket-root:
-          output-file-url: true
-          # content-type:
-          output-qr-url: true
-          # qr-width:
-          # public:
-          # expire:
-      - name: Show result
-        if: always()
-        run: |
-          echo '${{ steps.upload.outputs.result }}'
-          echo '${{ steps.upload.outputs.file-url }}'
-          echo '${{ steps.upload.outputs.qr-url }}'
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Use S3 Upload Action
+      uses: shallwefootball/s3-upload-action@master
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+        aws-bucket: euniceportfolio
+        file-path: ./README.md
+        output-file-url: true
+        output-qr-url: true
+
+    - name: Show Result
+      if: always()
+      run: |
+        echo 'Result: ${{ steps.upload.outputs.result }}'
+        echo 'File URL: ${{ steps.upload.outputs.file-url }}'
+        echo 'QR URL: ${{ steps.upload.outputs.qr-url }}'
