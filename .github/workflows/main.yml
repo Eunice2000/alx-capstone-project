@@ -1,33 +1,21 @@
-name: S3 Upload
-
-on:
-  push:
-    branches:
-      - master
+# inside .github/workflows/your-action.yml
+name: Add File to Bucket
+on: push
 
 jobs:
-  upload:
-    name: Use S3 Upload Action
+  deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Use S3 Upload Action
-      uses: shallwefootball/s3-upload-action@master
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
-        aws-bucket: euniceportfolio
-        file-path: ./README.md
-        output-file-url: true
-        output-qr-url: true
-
-    - name: Show Result
-      if: always()
-      run: |
-        echo 'Result: ${{ steps.upload.outputs.result }}'
-        echo 'File URL: ${{ steps.upload.outputs.file-url }}'
-        echo 'QR URL: ${{ steps.upload.outputs.qr-url }}'
+   - uses: actions/checkout@master
+   
+   - name: Upload file to bucket
+   uses: zdurham/s3-upload-github-action@master
+   with:
+     args: --acl public-read
+   env:
+    FILE: ./README.md
+    AWS_REGION: 'us-east-1'
+    S3_BUCKET: euniceportfolio
+    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
