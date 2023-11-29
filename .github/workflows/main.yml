@@ -1,14 +1,13 @@
 name: S3 Upload
 
-on: push
+on:
+  push
 
 jobs:
   upload:
-    name: Use this action for check
+    name: Upload to S3
     runs-on: ubuntu-latest
     steps:
-      - name: Check out
-        uses: actions/checkout@v3
       - name: Use this action
         uses: ./
         id: upload
