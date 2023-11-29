@@ -14,9 +14,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Navigate to Subdirectory
-      run: cd alx-capstone-project
-
     - name: Deploy README.md To S3
       uses: jakejarvis/s3-sync-action@master
       with:
@@ -26,5 +23,5 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-1'
-        SOURCE_DIR: './README.md'  # Assuming README.md is now in the current directory
-        DEST_DIR: '/'  # Destination directory in S3
+        SOURCE_DIR: './'  # Specify the path to your README.md file
+        DEST_DIR: 'cypress/'  # Destination directory in S3
